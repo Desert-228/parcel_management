@@ -1,0 +1,65 @@
+<div class="min-h-screen bg-gradient-to-r from-blue-200 to-purple-200 flex items-center justify-center p-6">
+  <div class="bg-white shadow-xl rounded-2xl w-full max-w-3xl p-8">
+
+    <!-- Title -->
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+      Track Parcel Status
+    </h2>
+
+    <!-- Search Box -->
+    <div class="flex items-center gap-3 mb-6">
+      <input
+        type="text"
+        
+        placeholder="Enter Customer ID"
+        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-400 outline-none"
+      />
+      <button
+
+        class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg shadow-md transition"
+      >
+        Search
+      </button>
+    </div>
+
+    <!-- Error Message -->
+    <div  class="bg-red-100 text-red-600 p-3 rounded-lg mb-4">
+      <!-- {{ errorMessage }} -->
+    </div>
+
+    <!-- Results -->
+    <div >
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Booking Details</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-200">
+          <thead class="bg-purple-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Booking ID</th>
+              <th class="px-4 py-2 border">Receiver</th>
+              <th class="px-4 py-2 border">Address</th>
+              <th class="px-4 py-2 border">Status</th>
+              <th class="px-4 py-2 border">Pickup</th>
+              <th class="px-4 py-2 border">Dropoff</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr  class="hover:bg-gray-100">
+              <!-- <td class="px-4 py-2 border text-center">{{ booking.bookingId }}</td>
+              <td class="px-4 py-2 border">{{ booking.recName }}</td>
+              <td class="px-4 py-2 border">{{ booking.recAddress }}</td>
+              <td class="px-4 py-2 border text-center">{{ booking.status }}</td>
+              <td class="px-4 py-2 border text-center">{{ booking.parPickupTime }}</td>
+              <td class="px-4 py-2 border text-center">{{ booking.parDropoffTime }}</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- No Results -->
+    <div  class="text-gray-500 mt-4 text-center">
+      No bookings found for this customer.
+    </div>
+
+  </div>
+</div>

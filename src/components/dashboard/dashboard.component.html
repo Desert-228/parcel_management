@@ -1,0 +1,36 @@
+
+<!-- navbar.component.html -->
+<nav class="bg-indigo-600 text-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <div class="text-2xl font-bold tracking-wide">
+        Parcel Management
+    </div>
+
+    <!-- Left Menu -->
+    <div *ngIf="!role" class="space-x-10 hidden md:flex">
+      <!-- Public -->
+      <a routerLink="/login" class="hover:text-gray-200 transition">Login</a>
+      <a routerLink="/register" class="hover:text-gray-200 transition">Register</a>
+    </div>
+
+    <!-- Customer Menu -->
+    <div *ngIf="role === 'Customer'" class="space-x-6 hidden md:flex">
+      <a routerLink="/home" class="hover:text-gray-200 transition">Home</a>
+      <a routerLink="/booking" class="hover:text-gray-200 transition">Booking</a>
+      <a routerLink="/tracking" class="hover:text-gray-200 transition">Tracking</a>
+      <a routerLink="/history" class="hover:text-gray-200 transition">Booking History</a>
+      <a routerLink="/logout" class="hover:text-gray-200 transition">Logout</a>
+    </div>
+
+    <!-- Officer Menu
+    <div *ngIf="role === 'OFFICER'" class="space-x-6 hidden md:flex">
+      <a routerLink="/home" class="hover:text-gray-200 transition">Home</a>
+      <a routerLink="/tracking" class="hover:text-gray-200 transition">Tracking</a>
+      <a routerLink="/update-status" class="hover:text-gray-200 transition">Update Status</a>
+      <a routerLink="/update-pickdrop" class="hover:text-gray-200 transition">Update Pickup & Dropoff</a>
+      <a routerLink="/history" class="hover:text-gray-200 transition">Booking History</a>
+      <a routerLink="/logout" class="hover:text-gray-200 transition">Logout</a>
+    </div> -->
+  </div>
+</nav>
